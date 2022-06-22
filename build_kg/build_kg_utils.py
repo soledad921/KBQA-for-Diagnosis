@@ -285,10 +285,10 @@ class MedicalExtractor(object):
 
 if __name__ == '__main__':
     path = "./graph_data/medical.json"
-    # print_data_info(path)
-    extractor = MedicalExtractor()
-    extractor.extract_triples(path)
+    print_data_info(path)
+    # extractor = MedicalExtractor()
+    # extractor.extract_triples(path)
     # extractor.create_entitys()
     # extractor.create_relations()
     # extractor.set_diseases_attributes()
-    extractor.export_entitys_relations()
+    # extractor.export_entitys_relations()
