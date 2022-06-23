@@ -25,10 +25,10 @@ class MedicalExtractor(object):
     def __init__(self):
         super(MedicalExtractor, self).__init__()
         self.graph = Graph(
-            host="127.0.0.1",
+            host="localhost",
             http_port=7474,
             user="neo4j",
-            password="123456")
+            password="15527367515x")
 
         # 共8类节点
         self.drugs = [] # 药品
@@ -285,10 +285,10 @@ class MedicalExtractor(object):
 
 if __name__ == '__main__':
     path = "./graph_data/medical.json"
-    print_data_info(path)
-    # extractor = MedicalExtractor()
-    # extractor.extract_triples(path)
-    # extractor.create_entitys()
-    # extractor.create_relations()
-    # extractor.set_diseases_attributes()
-    # extractor.export_entitys_relations()
+    # print_data_info(path)
+    extractor = MedicalExtractor()
+    extractor.extract_triples(path)
+    extractor.create_entitys()
+    extractor.create_relations()
+    extractor.set_diseases_attributes()
+    extractor.export_entitys_relations()
